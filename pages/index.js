@@ -1,7 +1,15 @@
 import Head from 'next/head';
+import { useRouter } from "next/router";
 import styles from '../styles/Home.module.css';
+import { useEffect } from 'react';
 
 export default function Home() {
+  const router = useRouter();
+
+useEffect(() => {
+  router.push('/Auth/Login')
+});
+  
   return (
     <div className={styles.container}>
       <Head>
